@@ -1,0 +1,105 @@
+{
+    "investissements_eligibles": [
+      {
+        "theme": "Energies Renouvelables",
+        "categorie_projet": "Energies solaires",
+        "investissements": [
+          {
+            "libelle": "déploiement du Plan de Solarisation",
+            "montant": "2M€",
+            "details": "Déploiement de panneaux photovoltaïque sur le parking zénith et centre de maintenance des transports publics urbains"
+          }
+        ]
+      },
+      {
+        "theme": "Gestion durable de l'eau et Assainissement",
+        "categorie_projet": "Service public de l'assainissement",
+        "investissements": [
+          {
+            "libelle": "PPI",
+            "montant": "8M€",
+            "details": [
+              "Réalisation des bassins d'orages (Saint Urbain à Marsannay la Côte, Bassin quai Gauthey à Dijon)",
+              "Réhabilitation des collecteurs du réseau d'assainissement",
+              "Basculement du réseau d'assainissement de Saint Apollinaire sur la station d'épuration de Dijon Longvic (soulager la situation d'épuration de Chevigny Saint Sauveur et réduire les rejets dans le milieu naturel pour 250 K€ en 2024)",
+              "Réduction des déversements des eaux usées avec un bassin supplémentaire de 15 000 m3 en complément du bassin Mongeotte"
+            ]
+          }
+        ]
+      },
+      {
+        "theme": "Gestion durable de l'eau et Assainissement",
+        "categorie_projet": "Gestion des eaux pluviales",
+        "investissements": [
+          {
+            "libelle": "Construction d'un bassin d'orage",
+            "details": "Capter et réduire la pollution issue des déversoirs d'orages du système unitaire vers le milieu naturel (par exemple Bassin d'orage de Saint Aubin à Marsannay la Côte)"
+          }
+        ]
+      },
+      {
+        "theme": "Gestion et valorisation des déchets",
+        "categorie_projet": "Collecte et tri des déchets ménagers et assimilés (DMA)",
+        "investissements": [
+          {
+            "libelle": "Acquisition de bennes à ordures ménagères et travaux de mise aux normes du centre de tri",
+            "montant": "21M€",
+            "details": [
+              "Déploiement de la station de production et de distribution d'hydrogène avec la 1ere benne à ordures ménagères",
+              "Démarrage opération de la station Nord (Valmy)",
+              "Modernisation du centre de tri (2M€ en 2024 et un montant total prévu au PPI de 29M€)"
+            ]
+          }
+        ]
+      },
+      {
+        "theme": "Gestion et valorisation des déchets",
+        "categorie_projet": "Traitement des déchets ménagers et assimilés (DMA)",
+        "investissements": [
+          {
+            "libelle": "Projet de modernisation de l’unité de valorisation énergétique"
+          }
+        ]
+      },
+      {
+        "theme": "Mobilité douce et transports propres",
+        "categorie_projet": "Transport individuel",
+        "investissements": [
+          {
+            "libelle": "Développement des pistes cyclables",
+            "montant": "2M€",
+            "details": "Réaménagement de la place du 30 octobre, amélioration de la rue de Mayence et son raccordement à la RD28"
+          }
+        ]
+      },
+      {
+        "theme": "Mobilité douce et transports propres",
+        "categorie_projet": "Transports en commun",
+        "investissements": [
+          {
+            "libelle": "Déploiement du projet hydrogène",
+            "montant": "51M€",
+            "details": [
+              "12M€ BP 2024 : Livraison des 16 premiers bus, travaux d'adaptation du centre de maintenance et exploitation André Gervais"
+            ]
+          },
+          {
+            "libelle": "Travaux d'infrastructures du projet CAPATRAM",
+            "montant": "15M€",
+            "details": "Aménagement du réseau et des arrêts de bus et travaux d’aménagement et d'entretien divers récurrents sur le tracé du tramway et pour le centre de maintenance"
+          }
+        ]
+      },
+      {
+        "theme": "Efficacité énergétique de la construction et de l'aménagement urbain",
+        "categorie_projet": "Aménagement Urbain",
+        "investissements": [
+          {
+            "libelle": "Modernisation de l’éclairage public",
+            "montant": "23 communes, 3 000 points lumineux en 2024"
+          }
+        ]
+      }
+    ]
+  }
+  

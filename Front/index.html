@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sfil - Fichotron</title>
+    <meta
+      name="description"
+      content="Générez une fiche client moderne avec une interface élégante, innovante et complète."
+    />
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Générer une fiche Client" />
+    <meta
+      property="og:description"
+      content="Générez une fiche client moderne et responsive avec une interface élégante, innovante et complète."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://votre-domaine.com" />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/sfil_ico.ico" />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background: url('img/full-bg.jpg') center/cover no-repeat">
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="container nav-container">
+          <img src="img/logo.png" alt="Logo Sfil" class="logo" loading="lazy" />
+          <ul class="nav-menu">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#generate">Générer</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#features">Fonctionnalités</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Hero Section with inline background image for hero -->
+      <section
+        id="hero"
+        class="hero"
+        style="position: relative; height: 30vh; display: flex; align-items: center; justify-content: center;"
+      >
+        <!-- Background Image Container (for hero only) -->
+        <div
+          class="hero-bg"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('img/hero-bg.jpg') center/cover no-repeat;"
+        ></div>
+        <!-- Overlay using a semi-transparent color from your palette -->
+        <div
+          class="hero-overlay"
+          style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(2,173,177,0.5);"
+        ></div>
+        <div
+          class="hero-content container"
+          style="position: relative; text-align: center; color: #fff; animation: fadeIn 1s ease-out;"
+        >
+          <h1 style="font-size: 2rem; margin-bottom: 0.5rem; color: white; font-weight: 700">
+            Fichotron - AI
+          </h1>
+          <p style="font-size: 1.5rem; margin-bottom: 1rem; color: white">
+            Créez vos fiches clients avec une simplicité déconcertante, en un clic !
+          </p>
+          <a
+            href="#about"
+            class="scroll-down"
+            style="display: inline-block; color: #fff; font-size: 1.5rem; text-decoration: none;"
+          >
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <!-- Generate Section mis à jour -->
+      <section id="generate" class="generate elements-section">
+        <div class="card generate-card">
+          <h2>Générer votre fiche client</h2>
+          <!-- Nouveau conteneur d'input avec suggestions intégrées -->
+          <div class="input-wrapper">
+            <span class="input-icon"><i class="fas fa-search"></i></span>
+            <input
+              type="text"
+              id="clientName"
+              placeholder="Nom du client"
+              required
+              aria-autocomplete="list"
+            />
+            <!-- La liste des suggestions est maintenant dans le wrapper -->
+            <div id="suggestions" class="suggestions" role="listbox" aria-live="polite"></div>
+          </div>
+          <!-- Groupe de boutons avec Importer (nouveau) et Générer -->
+          <!-- Corriger la section des boutons -->
+          <div class="button-group">
+            <div class="import-section">
+              <button class="btn import-btn" id="importFileBtn" aria-label="Importer un fichier">
+                <i class="fas fa-upload" aria-hidden="true"></i> Importer
+              </button>
+              <div id="uploadedFiles" class="uploaded-files"></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="generate-section">
+              <button class="btn generate-btn" id="generateFileBtn" aria-label="Générer la fiche client">
+                <i class="fas fa-download" aria-hidden="true"></i> Générer
+              </button>
+            </div>
+          </div>
+          <div id="message" class="message" role="alert" aria-live="assertive"></div>
+          <!-- Champ de fichier caché pour l'importation -->
+          <input type="file" id="fileInput" style="display: none" 
+          accept=".csv, .xls, .xlsx, .docx, .doc" multiple> <!-- Added multiple attribute -->
+          <!-- (Optionnel) Texte explicatif pour l'importation -->
+          <p class="import-info" style="font-size: 0.9rem; color: var(--color-secondary); margin-top: 0.5rem;">
+            Cliquez sur "Importer" pour sélectionner un fichier de données.
+          </p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about elements-section">
+        <h2>À propos de notre outil</h2>
+        <p>
+          Notre solution permet d'automatiser la génération de fiches clients en fusionnant des données publiques issues de différentes sources telles que data.gouv ou Wikipédia. Le résultat est une fiche standardisée sous format Word, précise, complète et modifiable, alignée sur vos exigences professionnelles.
+        </p>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features elements-section">
+        <h2>Fonctionnalités clés</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-bolt feature-icon"></i>
+            <h3>Rapidité</h3>
+            <p>
+              Générez vos fiches en temps réel et réalisez des gains de temps considérables !
+            </p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-search feature-icon"></i>
+            <h3>Analyse approfondie</h3>
+            <p>
+              Obtenez de nombreuses informations sur vos clients et optimisez vos stratégies.
+            </p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-shield-alt feature-icon"></i>
+            <h3>Sécurité</h3>
+            <p>
+              L'outil respecte les normes de sécurité et de confidentialité les plus strictes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <p>&copy; 2025 SFIL. Tous droits réservés.</p>
+        <ul class="footer-menu">
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Nous contacter</a></li>
+          <li>Site réalisé par LLaMazing Team</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bouton Retour en haut -->
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Charger le script externe -->
+    <script src="script.js"></script>
+  </body>
+</html>

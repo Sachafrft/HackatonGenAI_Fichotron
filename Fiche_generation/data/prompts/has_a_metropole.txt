@@ -1,0 +1,13 @@
+Génère un JSON contenant l'indication de si la collectivité fait partie d'une métropole.
+
+    Le JSON doit respecter cette structure :
+    {
+    "has_a_metropole": true/False
+    }
+
+
+    Règles :
+    - Toutes les données doivent être plausibles mais générées.
+    - Si une information est inconnue, ne pas inclure la clé.
+
+    Renvoie uniquement le JSON sans aucun texte explicatif.

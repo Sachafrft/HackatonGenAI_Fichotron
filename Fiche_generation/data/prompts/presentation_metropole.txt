@@ -1,0 +1,27 @@
+Génère un JSON contenant la présentation du représentant d'une métropole française.
+
+    Le JSON doit respecter cette structure :
+    {
+    "collectivite": {
+        "nom": "Nom de la métropole",
+        "superficie": "Superficie en km²",
+        "population": "Nombre d'habitants",
+        "chef": "Nom du chef ou président ou maire de la métropole",
+        "contact": {
+        "email": "Email de contact",
+        "telephone": "Numéro de téléphone"
+        },
+        "adresse": {
+        "rue": "Adresse de la métropole (là où se trouve sa direction)",
+        "code_postal": "Code postal",
+        "ville": "Ville",
+        },
+    }
+    }
+
+
+    Règles :
+    - Toutes les données doivent être plausibles mais générées.
+    - Si une information est inconnue, ne pas inclure la clé.
+
+    Renvoie uniquement le JSON sans aucun texte explicatif.

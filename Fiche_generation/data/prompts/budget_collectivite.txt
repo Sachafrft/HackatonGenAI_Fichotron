@@ -1,0 +1,16 @@
+Génère un JSON contenant les informations détaillées du représentant d'une collectivité française.
+
+    Le JSON doit respecter cette structure :
+    {
+    "date" : "Date publication total budget principal Ville le plus récent (le jour si possible, sinon l'année)"
+    "en_cours_total_budget_principal": ["total budget principal de la ville le plus récent et moyenne par habitant", "moyenne nationale du budget principal de la France le plus récent par habitant", "sources utilisées pour les 2 derniers champs"]
+    "capacite_de_desendettement": ["Capacité de désendettement de la ville", "Capacité de désendettement nationale", "sources utilisées pour les 2 derniers champs"]
+    "taux_endettement": ["Taux d’endettement de la ville en %", "Taux d’endettement nationale en %", "sources utilisées pour les 2 derniers champs"]
+    "duree_apparente_de_la_dette": ["durée apparente de la dette de la ville en année", "durée apparente de la dette nationale en année", "sources utilisées pour les 2 derniers champs"]
+    }
+
+    Règles :
+    - Toutes les données doivent être plausibles mais générées.
+    - Si une information est inconnue, ne pas inclure la clé.
+
+    Renvoie uniquement le JSON sans aucun texte explicatif.

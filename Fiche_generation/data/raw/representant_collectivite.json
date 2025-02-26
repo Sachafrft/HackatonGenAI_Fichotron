@@ -1,0 +1,13 @@
+{
+    "nom": "Jean Dupont",
+    "fonction": "Maire",
+    "date_naissance": "1965-07-21",
+    "formation": [
+        "\u00c9cole Nationale d'Administration",
+        "Master en droit public"
+    ],
+    "carriere": [
+        "Adjoint au maire",
+        "Conseiller municipal"
+    ]
+}

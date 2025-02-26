@@ -1,0 +1,28 @@
+Génère un JSON contenant la présentation d'une collectivité française.
+
+    Le JSON doit respecter cette structure :
+    {
+    "collectivite": {
+        "nom": "Nom de la collectivité",
+        "type": "Type de collectivité (par exemple : région, département, commune)",
+        "superficie": "Superficie en km²",
+        "population": "Nombre d'habitants",
+        "chef": "Nom du chef ou président ou maire de la collectivité",
+        "contact": {
+        "email": "Email de contact",
+        "telephone": "Numéro de téléphone"
+        },
+        "adresse": {
+        "rue": "Adresse de la collectivité",
+        "code_postal": "Code postal",
+        "ville": "Ville",
+        },
+    }
+    }
+
+
+    Règles :
+    - Toutes les données doivent être plausibles mais générées.
+    - Si une information est inconnue, ne pas inclure la clé.
+
+    Renvoie uniquement le JSON sans aucun texte explicatif.

@@ -1,0 +1,82 @@
+Génère un JSON contenant la liste des projets sociaux de la collectivité.
+
+    Le JSON doit respecter cette structure :
+    {
+    "projets": [
+        {
+        "theme": "Enseignement et formation professionnelle",
+        "categorie": "Financement des établissements d’enseignement",
+        "investissements": [
+            {
+            "libelle": "Libellé du projet",
+            "montant": "montant int en M€",
+            "details": [
+                {"montant": "montant int en M€", "details": "definit : présentation du projet courte"},
+                {"montant": "montant int en M€", "details": "definit : présentation du projet courte"},
+                {"montant": "montant int en M€", "details": "definit : présentation du projet courte"}
+            ],
+            "exemples": [
+                "string de présentation courte d'un projet concret",
+                
+            ]
+            }
+        ]
+        },
+        {
+        "theme": "Sport, culture et vie associative",
+        "categorie": "Financement des équipements sportifs",
+        "investissements": [
+            {
+            "libelle": "Libellé du projet",
+            "montant": "montant int en M€",
+            "details": "Parc urbain sportif Maladière"
+            },
+            {
+            "libelle": "Libellé du projet",
+            "montant": "montant int en M€",
+            "details": "definit : présentation du projet courte"
+            },
+            {
+            "libelle": "Libellé du projet",
+            "montant": "montant int en M€"
+            }
+        ]
+        },
+        {
+        "theme": "Sport, culture et vie associative",
+        "categorie": "Financement des équipements de la vie associative",
+        "investissements": [
+            {
+            "libelle": "Libellé du projet",
+            "montant": "montant int en M€",
+            "exemples": [
+                "string de présentation courte d'un projet concret",
+                "string de présentation courte d'un projet concret",
+            ]
+            }
+        ]
+        },
+        {
+        "theme": "Développement et cohésion territoriale",
+        "categorie": "Renouvellement urbain d’un Quartier Prioritaire de la Ville",
+        "investissements": [
+            {
+            "libelle": "Libellé du projet",
+            "montant": "Non spécifié"
+            },
+            {
+            "libelle": "Libellé du projet",
+            "montant": "Non spécifié"
+            }
+        ]
+        }
+    ]
+    }
+
+
+    Règles :
+    - Toutes les données doivent être plausibles mais générées.
+    - Si une information est inconnue, ne pas inclure la clé.
+    - Tu dois respecter les catégories existantes, le nombre de projets variants, adapte le json avec plus ou moins de projets.
+
+    Renvoie uniquement le JSON sans aucun texte explicatif.

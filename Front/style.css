@@ -1,0 +1,770 @@
+/* Custom Properties – Using your provided colors */
+:root {
+  /* Provided Colors: 95BB20, 02ADB1, 162C8D, 152984, 029DA1, 85A71D */
+  --color-primary: #152984;       /* Dark blue for headings & navigation */
+  --color-secondary: #162C8D;      /* Dark blue for main text */
+  --color-tertiary: #02ADB1;       /* Vibrant turquoise for interactive elements */
+  --color-tertiary-hover: #029DA1;  /* Hover variant */
+  --color-accent: #95BB20;         /* Vibrant green for CTAs */
+  --color-support: #85A71D;        /* Support accent for highlights */
+  --background: #F5F5F5;           /* Light background */
+  --card-bg: #FFFFFF;              /* White card background */
+  --border: #e0e0e0;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--background);
+  color: var(--color-secondary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section */
+.elements-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Visually Hidden (Accessibility) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+/* Main */
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--card-bg);
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  height: 60px;
+  width: auto;
+  margin: 10px 0;
+}
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-menu li a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+  color: var(--color-tertiary);
+}
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-tertiary), var(--color-tertiary-hover)), 
+              url('Front/img/hero-bg.jpg') center/cover no-repeat;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  opacity: 0.85;
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease-out;
+}
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.scroll-down {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+  text-decoration: none;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(8px); }
+  60% { transform: translateY(4px); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* About Section */
+.about {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #fafafa;
+  width: 100%;
+  padding: 70px;
+}
+.about h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.about p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+  padding: 2rem 0;
+  text-align: center;
+  width:100%;
+  margin: 50px;
+  padding: 0 70px;
+}
+.features h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+.feature-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  font-size: 2rem;
+  color: var(--color-tertiary);
+  margin-bottom: 0.5rem;
+}
+.feature-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+.feature-item p {
+  font-size: 0.95rem;
+}
+
+/* Data Import Section */
+.data-import {
+  padding: 2rem 0;
+  text-align: center;
+}
+.data-import h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.data-import input[type="file"] {
+  margin: 1rem 0;
+}
+
+/* Data Aggregation Section */
+.data-aggregation {
+  padding: 2rem 0;
+  text-align: center;
+}
+.data-aggregation h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+#aggregatedPreview {
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Comparison Section */
+.comparison {
+  padding: 2rem 0;
+  text-align: center;
+}
+.comparison h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.comparison-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.comparison-item h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.sheet-preview {
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 6px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* Feedback Section */
+.feedback {
+  padding: 2rem 0;
+  text-align: center;
+}
+.feedback h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.feedback textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+.feedback textarea:focus {
+  border-color: var(--color-tertiary);
+  outline: none;
+}
+.feedback .btn {
+  margin-top: 1rem;
+}
+
+/* Generate Section (Card) */
+
+.generate {
+  text-align: center;
+  margin: 50px;
+  margin-top: 40px;
+}
+.generate h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+  animation: slideUp 0.8s ease-out;
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Input & Button within Card */
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+input[type="text"]:focus {
+  border-color: var(--color-tertiary);
+  outline: none;
+}
+.btn {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  position: inline-block;
+  overflow: hidden;
+}
+.btn:active::after {
+  content: "";
+  position: absolute;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(3.5);
+    opacity: 0;
+  }
+}
+.btn:hover,
+.btn:focus {
+  background: var(--color-support);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Helper Text */
+.helper-text {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: var(--color-primary);
+}
+
+/* Suggestions */
+.suggestions {
+  margin-top: 0.75rem;
+  border: 1px solid var(--border);
+  display: none;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  animation: fadeIn 0.5s ease-in-out;
+  position:absolute;
+  background-color: white;
+  ;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.suggestions div {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;}
+
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #E6E6E6;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.footer-menu li a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+.footer-menu li a:hover{
+  color: #02ADB1
+}
+
+
+/* Button back to top */
+
+/* Style du bouton */
+.back-to-top {
+  position: fixed;
+  bottom: 30px; /* Distance depuis le bas */
+  right: 30px;  /* Distance depuis la droite */
+  background-color: white;
+  color: #02ADB1;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Effet au survol */
+.back-to-top:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Nouveau style pour le champ de saisie modernisé */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Mise à jour du style de la liste des suggestions */
+.input-wrapper .suggestions {
+  position: absolute;
+  top: 100%;  /* Directement en dessous de l'input */
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 8px 8px 0 0;
+  border-radius: 0 0 8px 8px; /* Augmentation du border-radius */
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none; /* Affiché dynamiquement par le JS */
+}
+
+.input-wrapper .suggestions.show {
+  display: block;
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--color-tertiary);
+  font-size: 1.2rem;
+}
+
+.input-wrapper input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 45px; /* espace pour l'icône à gauche */
+  border: 2px solid var(--border);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-wrapper input[type="text"]:focus {
+  border-color: var(--color-tertiary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* Optionnel : ajustement du bouton pour l'harmoniser avec le champ */
+.generate-card .btn.generate-btn {
+  margin-top: 1rem;
+}
+
+/* Nouveau style pour le bouton "Générer" */
+
+/* État normal */
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-accent); /* Texte vert */
+  background-color: #fff;      /* Fond blanc */
+  border: 2px solid var(--color-accent); /* Bord vert */
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+/* Pseudo-élément pour l'effet de remplissage */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%; /* Commence complètement à droite */
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-accent); /* Remplissage vert */
+  z-index: -1;
+  transition: right 0.3s ease;
+}
+
+/* État au survol : le remplissage s'étend de droite à gauche et le texte devient blanc */
+.btn:hover::before {
+  right: 0;
+}
+.btn:hover {
+  color: #fff;
+}
+
+/* Style de la carte dans la section Générer */
+.generate .card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 2rem;            /* Padding par défaut */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 1.5rem auto;      /* Centrée avec marge verticale */
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de survol pour ajouter de l'élévation */
+.generate .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Adaptation pour les écrans moyens (tablettes) */
+@media (max-width: 768px) {
+  .generate .card {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 90%;
+  }
+}
+
+/* Adaptation pour les très petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .generate .card {
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+/* Style du conteneur d'input (intégré dans la carte) */
+.generate .input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Style de l'input modernisé */
+.generate .input-container input[type="text"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus sur l'input */
+.generate .input-container input[type="text"]:focus {
+  border-color: var(--color-tertiary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* Style responsive du bouton */
+.generate .btn {
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Vous pouvez ajouter des media queries pour affiner le bouton si besoin */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.import-section, .generate-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploaded-files {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.spacer {
+  width: 80%;
+  height: 1px;
+  background-color: #e0e0e0 !important;
+  margin: 10px auto !important;
+}
+
+.button-group .btn {
+  width: 100%;
+  max-width: 200px;
+  margin: 0;
+  padding: 12px 24px;
+}
+
+/* Remove the pseudo-element separator */
+.button-group .btn:first-child::after {
+  display: none;
+}
+
+/* Style pour les en-têtes des catégories dans la liste de suggestions */
+.suggestions-header {
+  background-color: var(--color-tertiary); /* Utilisation de la couleur d'accent (#95BB20) */
+  color: #fff;                           /* Texte en blanc */
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Assurez-vous que les boutons ont la même hauteur et la même taille */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* Hauteur fixe pour tous les boutons */
+  padding: 0 1rem; /* Padding cohérent */
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Rapprochez les boutons */
+.button-group {
+  display: flex;
+  gap: 0.5rem; /* Réduisez la valeur de gap pour rapprocher les boutons */
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Assurez-vous que les boutons ont la même hauteur et la même taille */
+.btn.import-btn,
+.btn.generate-btn {
+  width: 150px; /* Largeur fixe pour tous les boutons */
+}
+
+/* Améliorer l'affichage des fichiers */
+.uploaded-files {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  transition: background 0.2s;
+}
+
+.file-item:hover {
+  background: #e9ecef;
+}
+
+.remove-file {
+  color: #dc3545;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-file:hover {
+  background: #ffeef0;
+}

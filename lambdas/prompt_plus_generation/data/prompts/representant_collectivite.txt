@@ -1,0 +1,16 @@
+Génère un JSON contenant les informations détaillées du représentant de la collectivite de ta base documentaire.
+
+    Le JSON doit respecter cette structure :
+    {
+    "nom": "Nom du dirigeant",
+    "fonction": "Fonction exercée",
+    "date_naissance": "YYYY-MM-DD",
+    "formation": ["Diplôme ou formation 1", "Diplôme ou formation 2"],
+    "carriere": ["Poste 1", "Poste 2"]
+    }
+
+    Règles :
+    - Toutes les données doivent être plausibles mais générées.
+    - Si une information est inconnue, ne pas inclure la clé.
+
+    Renvoie uniquement le JSON sans aucun texte explicatif.

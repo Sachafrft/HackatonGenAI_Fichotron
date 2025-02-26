@@ -1,0 +1,39 @@
+{
+"investissements_eligibles": [
+    {
+      "theme": "Energies renouvelables",
+      "categorie_projet": "Energies solaires",
+      "investissements": [
+        {
+          "libelle": "déploiement de panneaux photovoltaïques sur les toits des bâtiments publics",
+          "lieux": ["groupes scolaires Anjou et Buffon", "Gymnase", "Stade Fontaine d’Ouche"]
+        }
+      ]
+    },
+    {
+      "theme": "Mobilité douces et transports propres",
+      "categorie_projet": "Transport individuel",
+      "investissements": [
+        {
+          "libelle": "367km d’aménagement cyclables"
+        },
+        {
+          "libelle": "remplacement des tracteurs et véhicules thermiques du parc municipal par des véhicules électriques"
+        }
+      ]
+    },
+    {
+      "theme": "Efficacité énergétique de la construction et de l’aménagement urbain",
+      "categorie_projet": "Construction/acquisition ou rénovation",
+      "investissements": [
+        {
+          "libelle": "grand plan pluriannuel de rénovation des 76 écoles dijonnaises",
+          "enveloppe_budgetaire": "75M€",
+          "exemples": [
+            "rénovation énergétique des groupes scolaires Lallemand et Champs-Perdrix en 2024-2025"
+          ]
+        }
+      ]
+    }
+  ]
+}
